@@ -23,8 +23,8 @@ function refreshPools($http, $scope, $templateCache) {
             $scope.status = status;
             $scope.pools =  data.output.pools;
             $scope.stats = data.output.stats;
-            var totalUsed = data.output.stats.total_used;
-            var totalSpace = data.output.stats.total_space;
+            var totalUsed = data.output.stats.total_used_bytes;
+            var totalSpace = data.output.stats.total_bytes;
             $scope.percentUsed = totalUsed / totalSpace;
             $scope.tableParams.reload();
         }).
